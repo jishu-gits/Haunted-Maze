@@ -105,3 +105,19 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Ignore imported third-party assets
+/[Aa]ssets/BTM_Assets/
+/[Aa]ssets/BTM_Assets.meta
+/[Aa]ssets/Blink/
+/[Aa]ssets/Blink.meta
+/[Aa]ssets/NewPunch/
+/[Aa]ssets/NewPunch.meta
+/[Aa]ssets/OccaSoftware/
+/[Aa]ssets/OccaSoftware.meta
+/[Aa]ssets/TutorialInfo/
+/[Aa]ssets/TutorialInfo.meta
+
+# Ignore specific build outputs
+/HauntedMazeBuild/
+HauntedMazeBuild.zip
