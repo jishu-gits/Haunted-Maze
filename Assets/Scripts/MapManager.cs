@@ -174,6 +174,7 @@ public class MapManager : MonoBehaviour
         if (gemsRemaining == 0)
         {
             zombiesCanMove = false;
+            Time.timeScale = 0f; // Pause the game
             UIManager.instance.ShowGameOver(true);
         }
     }

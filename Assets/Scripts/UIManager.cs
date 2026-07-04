@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     {
         gameOver.SetActive(true);
         winLoseText.text = isWin ? "You Win" : "You Lose";
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     public void PlayAgain()

@@ -6,10 +6,10 @@ public class PlayerLook : MonoBehaviour
     public Transform cameraTarget;
 
     [Header("Settings")]
-    public float mouseSensitivity = 200f;
+    public float mouseSensitivity = 300f;
 
-    public float minPitch = -80f;
-    public float maxPitch = 80f;
+    public float minPitch = -100f;
+    public float maxPitch = 100f;
 
     private float pitch = 0f;
 

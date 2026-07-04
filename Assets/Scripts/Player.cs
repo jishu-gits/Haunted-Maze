@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     private CharacterController controller;
     private Animator anim;
+    public GameObject gameplayCamera;
+    public GameObject deathCamera;
 
     private bool isMoving;
     private bool canMove = true;
@@ -74,6 +76,8 @@ public class Player : MonoBehaviour
         AudioManager.instance.PlaySFX(screamSFX);
 
         anim.SetTrigger("isDead");
+        gameplayCamera.SetActive(false);
+        deathCamera.SetActive(true);
 
         UIManager.instance.ShowGameOver(false);
     }
