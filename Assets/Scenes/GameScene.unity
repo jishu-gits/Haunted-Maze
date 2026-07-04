@@ -927,11 +927,18 @@ MonoBehaviour:
   maps:
   - {fileID: 2800000, guid: 5af0970b9d9e940429067c975b0aef23, type: 3}
   gemPrefab: {fileID: 3244820566204856004, guid: 1224fb19e9788a340afda95cb7eea181, type: 3}
-  zombiePrefab: {fileID: 7450673073387524846, guid: 0f1967e44d52bea428b2b43efe7b0c18, type: 3}
+  zombiePrefab:
+  - {fileID: 7450673073387524846, guid: 0f1967e44d52bea428b2b43efe7b0c18, type: 3}
+  - {fileID: 6534652793892906268, guid: dbb39997c815b18489628613229068f1, type: 3}
+  - {fileID: 932930999639301853, guid: f67462b4c46f58f4383bd1398c017a88, type: 3}
+  - {fileID: 7482768350367851411, guid: 2b9ca7900b0c5904c9af15fe3c87222d, type: 3}
+  - {fileID: 5177746422105258505, guid: 01bcf122526a57b4f8d7159bc9be5dc7, type: 3}
+  - {fileID: 1594354895311044220, guid: 95519edd6665e3746a53ae62a3982004, type: 3}
   wallPrefab: {fileID: 338290039546331226, guid: 100a86bece9f0da4d97db67064575470, type: 3}
   pointLightPrefab: {fileID: 5110769887714853587, guid: 99307e4da124cec40a09e5400460055c, type: 3}
   numberOfLights: 35
   zombiesCanMove: 0
+  zombieCount: 10
 --- !u!4 &627110984
 Transform:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class MapManager : MonoBehaviour
     public Texture2D[] maps;
 
     public GameObject gemPrefab;
-    public GameObject zombiePrefab;
+    public GameObject[] zombiePrefab;
     public GameObject wallPrefab;
     public GameObject pointLightPrefab;
     public int numberOfLights = 35;
@@ -19,6 +19,7 @@ public class MapManager : MonoBehaviour
     private Color wallColor = Color.black;
 
     private int gemsRemaining;
+    public int zombieCount = 10;
 
     public static MapManager instance;
 
@@ -69,7 +70,7 @@ public class MapManager : MonoBehaviour
 
     private void GenerateGem()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             if (openPositions.Count == 0)
                 return;
@@ -78,7 +79,7 @@ public class MapManager : MonoBehaviour
             Instantiate(gemPrefab, openPositions[index], Quaternion.identity);
             openPositions.RemoveAt(index);
         }
-        gemsRemaining = 2;
+        gemsRemaining = 3;
     }
 
     public Vector3 GetRandomPos()
@@ -88,14 +89,22 @@ public class MapManager : MonoBehaviour
     }
     private void GenerateZombie()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < zombieCount; i++)
         {
             if (openPositions.Count == 0)
                 return;
 
-            int index = Random.Range(0, openPositions.Count);
-            Instantiate(zombiePrefab, openPositions[index], Quaternion.identity);
-            openPositions.RemoveAt(index);
+            int positionIndex = Random.Range(0, openPositions.Count);
+
+            // Pick one of the six zombie prefabs randomly
+            GameObject randomZombie =
+            zombiePrefab[Random.Range(0, zombiePrefab.Length)];
+
+            Instantiate(randomZombie,
+                    openPositions[positionIndex],
+                    Quaternion.identity);
+
+            openPositions.RemoveAt(positionIndex);
         }
     }
 
